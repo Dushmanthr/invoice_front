@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000'; 
+const BASE_URL = 'https://invoice-384t.onrender.com'; 
 
 export const fetchInvoices = () => {
   return axios.get(`${BASE_URL}/invoices`);
