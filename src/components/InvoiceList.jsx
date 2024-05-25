@@ -41,7 +41,7 @@ const InvoiceList = ({ refreshList }) => {
       <h2 className='h2-invoices'>Invoices</h2>
       <div className='header-invoice-list'>
         <p className='total-invoices'>Total Invoices: {totalInvoices}</p>
-        <button id='add-new-button'>Add New</button>
+        <Link to={"/invoices/add"} id='add-new-button'>Add New</Link>
       </div>
       <table className='invoice-table'>
         <thead>

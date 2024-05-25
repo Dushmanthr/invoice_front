@@ -15,7 +15,7 @@ function App() {
           <Route path="/" exact element={<Homepage/>} />
           <Route path="/invoices/add" element={<AddInvoice />} />
           <Route path="/invoices/:id/edit" element={<EditInvoice />} />
-          <Route path="/invoices/:id" element={<InvoiceDetail />} />
+          <Route path="/invoice/:id" element={<InvoiceDetail />} />
           <Route path="/invoices" element={<InvoiceList />} />
           <Route path="/" element={<Home />} />
         </Routes>

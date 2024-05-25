@@ -18,8 +18,8 @@ const InvoicePreview = ({ invoiceData, isOpen, onClose }) => {
           <div className="intro">
             <div>
               <p className="bill-to-label">BILL TO:</p>
-              <p className='name'>Name</p>
-              <p className="address">Address</p>
+              <p className='name'>Name:{invoiceData.name}</p>
+              <p className="address">Address: {invoiceData.address}</p>
             </div>
             <div className="invoice-detail">
               <p>Invoice Detail:</p>

@@ -7,9 +7,12 @@ const Dashboard = () => {
   const [totalCustomers, setTotalCustomers] = useState(0);
 
   useEffect(() => {
-    axios.get('/api/invoices/count')
+    axios.get('http://localhost:5000/invoices/count/total')
       .then(response => {
-        setTotalInvoices(response.data.totalInvoices);
+        console.log(response)
+        setTotalInvoices(parseInt(response.data.count));
+        setTotalCustomers(parseInt(response.data.count));
+
       })
       .catch(error => {
         console.error('Error fetching total invoices count:', error.response);
