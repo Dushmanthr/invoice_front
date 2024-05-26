@@ -8,7 +8,7 @@ const EditInvoice = () => {
   const [amount, setAmount] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/invoices/${id}`)
+    axios.get(`https://invoice-384t.onrender.com/invoices/${id}`)
       .then(response => {
         const { invoiceNumber, amount } = response.data;
         setInvoiceNumber(invoiceNumber);
@@ -21,7 +21,7 @@ const EditInvoice = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:5000/invoices/${id}`, { invoiceNumber, amount })
+    axios.put(`https://invoice-384t.onrender.com/invoices/${id}`, { invoiceNumber, amount })
       .then(response => {
         console.log('Invoice updated successfully:', response.data);
       })

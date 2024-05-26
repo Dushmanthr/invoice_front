@@ -8,7 +8,7 @@ const InvoiceDetail = () => {
   const [invoice, setInvoice] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/invoices/${id}`)
+    axios.get(`https://invoice-384t.onrender.com/invoices/${id}`)
       .then(response => {
         setInvoice(response.data);
       })

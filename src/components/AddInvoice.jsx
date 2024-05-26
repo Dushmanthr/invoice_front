@@ -47,7 +47,7 @@ const AddInvoice = () => {
   const handleSave = async () => {
     try {
       console.log(items);
-      const response = await axios.post('http://localhost:5000/invoices', { invoiceNumber,name, invoiceDate, dueDate, items,address });
+      const response = await axios.post('https://invoice-384t.onrender.com/invoices', { invoiceNumber,name, invoiceDate, dueDate, items,address });
       console.log('Invoice created successfully:', response.data);
       setShowMessage(true);
       setInvoiceSaved(true);

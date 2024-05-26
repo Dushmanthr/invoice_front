@@ -7,7 +7,7 @@ const Dashboard = () => {
   const [totalCustomers, setTotalCustomers] = useState(0);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/invoices/count/total')
+    axios.get('https://invoice-384t.onrender.com/invoices/count/total')
       .then(response => {
         console.log(response)
         setTotalInvoices(parseInt(response.data.count));
